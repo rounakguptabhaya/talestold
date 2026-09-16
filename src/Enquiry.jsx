@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 // import Standalone from "./components/Standalone";
 import EnquiryForm from "./Components/EnquiryForm";
+import PageRibbon from "./Components/PageRibbon.jsx";
 
 const Enquiry = () => {
     const location = useLocation();
@@ -11,9 +12,7 @@ const Enquiry = () => {
     return(
         <div>
             {/* <Standalone title="Enquiry" link="enquiry"/> */}
-            <div className="paralax-section-slide-data1" style={{ backgroundImage: "url('images/standaloneBanner.avif')" }}>
-                {/* <h2 className="">Product Listing</h2> */}
-            </div>
+            <PageRibbon />
             <EnquiryForm product={name} />
         </div>
     )

@@ -156,52 +156,52 @@ jQuery(function ($) {
     /* ===================================
                 Rev Slider js
     ====================================== */
-    $("#rev_slider_1_1").show().revolution({
-        sliderType:"standard",
-        jsFileLocation:"//localhost:82/revslider/revslider/public/assets/js/",
-        sliderLayout:"fullscreen",
-        dottedOverlay:"none",
-        delay:9000,
-        navigation: {
-            onHoverStop:"off",
-        },
-        responsiveLevels:[1240,1024,778,480],
-        visibilityLevels:[1240,1024,778,480],
-        gridwidth:[1240,1024,778,480],
-        gridheight:[868,768,960,720],
-        lazyType:"none",
-        parallax: {
-            type:"mouse",
-            origo:"enterpoint",
-            speed:400,
-            speedbg:0,
-            speedls:0,
-            levels:[1,2,3,4,5,6,7,8,9,10,0,0,0,0,0,55],
-            disable_onmobile:"on"
-        },
-        shadow:0,
-        spinner:"off",
-        stopLoop:"off",
-        stopAfterLoops:-1,
-        stopAtSlide:-1,
-        shuffle:"off",
-        autoHeight:"off",
-        fullScreenAutoWidth:"off",
-        fullScreenAlignForce:"off",
-        fullScreenOffsetContainer: "",
-        fullScreenOffset: "",
-        disableProgressBar:"on",
-        hideThumbsOnMobile:"off",
-        hideSliderAtLimit:0,
-        hideCaptionAtLimit:0,
-        hideAllCaptionAtLilmit:0,
-        debugMode:false,
-        fallbacks: {
-            simplifyAll:"off",
-            nextSlideOnWindowFocus:"off",
-            disableFocusListener:false,
-        }
-    });
+    // $("#rev_slider_1_1").show().revolution({
+    //     sliderType:"standard",
+    //     jsFileLocation:"//localhost:82/revslider/revslider/public/assets/js/",
+    //     sliderLayout:"fullscreen",
+    //     dottedOverlay:"none",
+    //     delay:9000,
+    //     navigation: {
+    //         onHoverStop:"off",
+    //     },
+    //     responsiveLevels:[1240,1024,778,480],
+    //     visibilityLevels:[1240,1024,778,480],
+    //     gridwidth:[1240,1024,778,480],
+    //     gridheight:[868,768,960,720],
+    //     lazyType:"none",
+    //     parallax: {
+    //         type:"mouse",
+    //         origo:"enterpoint",
+    //         speed:400,
+    //         speedbg:0,
+    //         speedls:0,
+    //         levels:[1,2,3,4,5,6,7,8,9,10,0,0,0,0,0,55],
+    //         disable_onmobile:"on"
+    //     },
+    //     shadow:0,
+    //     spinner:"off",
+    //     stopLoop:"off",
+    //     stopAfterLoops:-1,
+    //     stopAtSlide:-1,
+    //     shuffle:"off",
+    //     autoHeight:"off",
+    //     fullScreenAutoWidth:"off",
+    //     fullScreenAlignForce:"off",
+    //     fullScreenOffsetContainer: "",
+    //     fullScreenOffset: "",
+    //     disableProgressBar:"on",
+    //     hideThumbsOnMobile:"off",
+    //     hideSliderAtLimit:0,
+    //     hideCaptionAtLimit:0,
+    //     hideAllCaptionAtLilmit:0,
+    //     debugMode:false,
+    //     fallbacks: {
+    //         simplifyAll:"off",
+    //         nextSlideOnWindowFocus:"off",
+    //         disableFocusListener:false,
+    //     }
+    // });
 
 
     /* ===================================
