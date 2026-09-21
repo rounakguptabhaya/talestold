@@ -22,9 +22,9 @@ const NavbarTest = () => {
 
                         <div className="col-3 nav-icon pt-3">
                             <ul className="social-icons-simple text-left">
-                                <li><a href="javascript:void(0)" className="facebook-bg-hvr"><i className="fab fa-facebook-f" aria-hidden="true"></i></a></li>
-                                <li><a href="javascript:void(0)" className="twitter-bg-hvr"><i className="fab fa-twitter" aria-hidden="true"></i></a> </li>
-                                <li><a href="javascript:void(0)" className="instagram-bg-hvr"><i className="fab fa-instagram" aria-hidden="true"></i></a></li>
+                                {/* <li><a href="javascript:void(0)" className="facebook-bg-hvr"><i className="fab fa-facebook-f" aria-hidden="true"></i></a></li> */}
+                                {/* <li><a href="javascript:void(0)" className="twitter-bg-hvr"><i className="fab fa-twitter" aria-hidden="true"></i></a> </li> */}
+                                <li><a href="https://www.instagram.com/sgb_tales?stkn=MWs1bXBqNmFveHd5&utm_source=qr" target="_blank" className="instagram-bg-hvr"><i className="fab fa-instagram" aria-hidden="true"></i></a></li>
                             </ul>
                         </div>
                         <div className="col-6 text-center nav-logo">
@@ -352,9 +352,9 @@ const NavbarTest = () => {
                                         </nav>
                                         <div className="side-footer w-100">
                                             <ul className="social-icons-simple white top40">
-                                                <li><a className="facebook-bg-hvr" href="javascript:void(0)"><i className="fab fa-facebook-f"></i> </a> </li>
-                                                <li><a className="twitter-bg-hvr" href="javascript:void(0)"><i className="fab fa-twitter"></i> </a> </li>
-                                                <li><a className="instagram-bg-hvr" href="javascript:void(0)"><i className="fab fa-instagram"></i> </a> </li>
+                                                {/* <li><a className="facebook-bg-hvr" href="javascript:void(0)"><i className="fab fa-facebook-f"></i> </a> </li> */}
+                                                {/* <li><a className="twitter-bg-hvr" href="javascript:void(0)"><i className="fab fa-twitter"></i> </a> </li> */}
+                                                <li><a className="instagram-bg-hvr" target="_blank" href="https://www.instagram.com/sgb_tales?stkn=MWs1bXBqNmFveHd5&utm_source=qr"><i className="fab fa-instagram"></i> </a> </li>
                                             </ul>
                                             <p className="whitecolor">&copy; <span id="year"></span> Product Shop. Made With Love by ThemesIndustry</p>
                                         </div>

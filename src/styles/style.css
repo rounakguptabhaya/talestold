@@ -2939,8 +2939,8 @@ textarea:focus {
 }
 
 .contact-sec {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .contact-sec .contact-description {
@@ -3009,6 +3009,12 @@ textarea:focus {
     box-shadow: 1px 1px 8px #dddddd;
     /*border:solid .5px #dddddd;*/
     border-radius: 10px;
+}
+
+.enquiry-contact-box {
+    flex: 0 0 100%;
+    max-width: 100%;
+    width: 100%;
 }
 
 .contact-sec .contact-box .small-heading {

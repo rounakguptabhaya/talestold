@@ -7,6 +7,7 @@ import PageRibbon from './Components/PageRibbon.jsx';
 
 const Products = () => {
     const { filterProducts } = useFilterContext();
+    console.log("filterProducts:", filterProducts);
     const { products } = useProductContext();
 
     const [isMobile, setIsMobile] = useState(
@@ -47,26 +48,29 @@ const Products = () => {
 
                                 <div className="col-12 product-listing-heading">
                                     <h1 className="heading text-left">
-                                        Product Listing
+                                        The Collection
                                     </h1>
 
                                     <p className="para_text text-left">
-                                        Lorem ipsum dolor sit amet, consectetur
-                                        adipiscing elit. tellus lacus faucibus
-                                        lectus, sed cursused eros ligula non odio.
+                                        Hand-painted originals — every piece tells a tale.
                                     </p>
                                 </div>
 
                                 <div className="col-12 product-listing-products">
                                     <div className="product-list row">
 
-                                        {filterProducts.map((product) => (
-                                            <ProdCard
-                                                key={product.id}
-                                                name={product.name}
-                                                ext={product.ext}
-                                            />
-                                        ))}
+                                        {filterProducts.map((product) => {
+                                            return (
+                                                <ProdCard
+                                                    key={product.id}
+                                                    name={product.name}
+                                                    ext={product.ext}
+                                                    price={product.price}
+                                                    id={product.id}
+                                                    category={product.category}
+                                                />
+                                            );
+                                        })}
 
                                     </div>
                                 </div>

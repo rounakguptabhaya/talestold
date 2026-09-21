@@ -65,8 +65,8 @@ const Banner = () => {
             try {
 
                 $slider.show().revolution({
-
-                    sliderType: "standard",
+                               hide_onmobile: false,
+                               hide_under: 0,
 
                     /*
                     IMPORTANT:
@@ -79,7 +79,7 @@ const Banner = () => {
 
                     dottedOverlay: "none",
 
-                    delay: 9000,
+                    delay: 5000,
 
                     navigation: {
 
@@ -255,6 +255,39 @@ const Banner = () => {
 
         initSlider();
 
+        const sliderWrapper = document.getElementById("rev_slider_1_1_wrapper");
+        const $slider = $("#rev_slider_1_1");
+        const isMobileViewport = window.matchMedia("(max-width: 767px)").matches;
+        let touchStartX = 0;
+        let touchStartY = 0;
+
+        const handleTouchStart = (event) => {
+            const touch = event.changedTouches[0];
+            touchStartX = touch.clientX;
+            touchStartY = touch.clientY;
+        };
+
+        const handleTouchEnd = (event) => {
+            const touch = event.changedTouches[0];
+            const deltaX = touch.clientX - touchStartX;
+            const deltaY = touch.clientY - touchStartY;
+
+            if (Math.abs(deltaX) < 50 || Math.abs(deltaX) <= Math.abs(deltaY)) {
+                return;
+            }
+
+            if (deltaX < 0 && typeof $slider.revnext === "function") {
+                $slider.revnext();
+            } else if (deltaX > 0 && typeof $slider.revprev === "function") {
+                $slider.revprev();
+            }
+        };
+
+        if (isMobileViewport) {
+            sliderWrapper?.addEventListener("touchstart", handleTouchStart, { passive: true });
+            sliderWrapper?.addEventListener("touchend", handleTouchEnd, { passive: true });
+        }
+
 
         /*
         Cleanup.
@@ -263,6 +296,9 @@ const Banner = () => {
         */
 
         return () => {
+
+            sliderWrapper?.removeEventListener("touchstart", handleTouchStart);
+            sliderWrapper?.removeEventListener("touchend", handleTouchEnd);
 
             const $slider = $("#rev_slider_1_1");
 
@@ -316,6 +352,32 @@ const Banner = () => {
 
                 #rev_slider_1_1 > ul > li.slide-fallback-tan {
                     background-color: #e9e4de !important;
+                }
+
+                @media (max-width: 767px) {
+                    #slide-2-layer-3 {
+                        box-sizing: border-box !important;
+                        max-width: calc(100vw - 40px) !important;
+                        text-align: center !important;
+                        white-space: normal !important;
+                        width: calc(100vw - 40px) !important;
+                    }
+
+                    #slide-4-layer-3 {
+                        box-sizing: border-box !important;
+                        max-width: calc(100vw - 40px) !important;
+                        text-align: center !important;
+                        white-space: normal !important;
+                        width: calc(100vw - 40px) !important;
+                    }
+
+                    #slide-1-layer-3 {
+                        box-sizing: border-box !important;
+                        max-width: calc(100vw - 40px) !important;
+                        text-align: center !important;
+                        white-space: normal !important;
+                        width: calc(100vw - 40px) !important;
+                    }
                 }
             `}</style>
 
@@ -374,7 +436,7 @@ const Banner = () => {
                             >
 
                                 <img
-                                    src="images/potrait2.png"
+                                    src="images/Reverie.png"
                                     data-bgposition="right center"
                                     data-bgfit={bgFit}
                                     data-bgrepeat="no-repeat"
@@ -522,10 +584,10 @@ const Banner = () => {
                                     }}
                                 >
                                     <a
-                                        href="#"
-                                        className="btn white-trans-btn-with-white-border"
+                                        href="/products"
+                                        className="btn white-into-black-trans-btn mr-3"
                                     >
-                                        READ MORE
+                                        EXPLORE
                                     </a>
                                 </div>
 
@@ -604,7 +666,7 @@ const Banner = () => {
                                         fontFamily: "'Poppins', sans-serif"
                                     }}
                                 >
-                                    Latest Fashion
+                                    Art that speaks for itself
                                 </div>
 
 
@@ -638,7 +700,7 @@ const Banner = () => {
                                         fontFamily: "'Poppins', sans-serif"
                                     }}
                                 >
-                                    Classic Collection
+                                    Made with Passion
                                 </div>
 
 
@@ -650,9 +712,9 @@ const Banner = () => {
                                     data-y="['middle','middle','middle','middle']"
                                     data-voffset="['5','5','5','5']"
                                     data-fontsize="['18','18','17','17']"
-                                    data-width="none"
+                                    data-width="['none','none','300','300']"
                                     data-height="none"
-                                    data-whitespace="nowrap"
+                                    data-whitespace="['nowrap','nowrap','normal','normal']"
                                     data-type="text"
                                     data-responsive_offset="on"
                                     data-frames='[{"delay":10,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":280,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
@@ -670,23 +732,24 @@ const Banner = () => {
                                         fontFamily: "'Poppins', sans-serif"
                                     }}
                                 >
-                                    Choose from clothes of World’s Famous Brands
+                                    Discover artwork crafted to bring character to every space
                                 </div>
 
 
                                 <div
-                                    className="tp-caption tp-resizeme"
-                                    id="slide-2-layer-8"
-                                    data-x="['right','center','center','center']"
+                                    className="tp-caption rev-btn rs-parallaxlevel-2"
+                                    id="slide-3-layer-4"
+                                    data-x="['center','center','center','center']"
                                     data-hoffset="['0','0','0','0']"
-                                    data-y="['top','top','top','top']"
-                                    data-voffset="['400','439','523','270']"
-                                    data-width="['260','160','260','260']"
+                                    data-y="['middle','middle','middle','middle']"
+                                    data-voffset="['82','82','73','70']"
+                                    data-width="none"
                                     data-height="none"
                                     data-whitespace="nowrap"
-                                    data-type="button"
+                                    data-type="text"
                                     data-responsive_offset="on"
-                                    data-frames='[{"delay":10,"speed":2000,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":280,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"500","ease":"Linear.ease","to":"o:1;rX:0;rY:0;rZ:0;z:0;"}]'
+                                    data-responsive="off"
+                                    data-frames='[{"delay":10,"speed":2000,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":280,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
                                     data-textalign="['inherit','inherit','inherit','inherit']"
                                     data-paddingtop="[0,0,0,0]"
                                     data-paddingright="[0,0,0,0]"
@@ -704,17 +767,10 @@ const Banner = () => {
                                     }}
                                 >
                                     <a
-                                        href="#"
+                                        href="/products"
                                         className="btn white-into-black-trans-btn mr-3"
                                     >
-                                        READ MORE
-                                    </a>
-
-                                    <a
-                                        href="#"
-                                        className="btn trans-black-btn"
-                                    >
-                                        SHOW NOW
+                                        EXPLORE
                                     </a>
                                 </div>
 
@@ -792,7 +848,7 @@ const Banner = () => {
                                         fontFamily: "'Poppins', sans-serif"
                                     }}
                                 >
-                                    The Most latest
+                                    More Than Just a Painting
                                 </div>
 
 
@@ -825,7 +881,7 @@ const Banner = () => {
                                         fontFamily: "'Poppins', sans-serif"
                                     }}
                                 >
-                                    Trending Collection
+                                    Bring Spaces Alive
                                 </div>
 
 
@@ -837,9 +893,9 @@ const Banner = () => {
                                     data-y="['middle','middle','middle','middle']"
                                     data-voffset="['5','5','5','5']"
                                     data-fontsize="['18','18','16','16']"
-                                    data-width="none"
+                                    data-width="['none','none','300','300']"
                                     data-height="none"
-                                    data-whitespace="nowrap"
+                                    data-whitespace="['nowrap','nowrap','normal','normal']"
                                     data-type="text"
                                     data-responsive_offset="on"
                                     data-frames='[{"delay":10,"speed":2000,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":280,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
@@ -858,24 +914,25 @@ const Banner = () => {
                                         fontFamily: "'Poppins', sans-serif"
                                     }}
                                 >
-                                    Choose from clothes of World’s Famous Brands
+                                    Discover thoughtful art that brings personality and timeless beauty.
                                 </div>
 
 
                                 <div
-                                    className="tp-caption tp-resizeme"
-                                    id="slide-2-layer-4"
-                                    data-x="['left','center','center','center']"
+                                    className="tp-caption rev-btn rs-parallaxlevel-2"
+                                    id="slide-3-layer-4"
+                                    data-x="['center','center','center','center']"
                                     data-hoffset="['0','0','0','0']"
-                                    data-y="['top','top','top','top']"
-                                    data-voffset="['400','439','523','270']"
-                                    data-width="['160','160','260','320']"
+                                    data-y="['middle','middle','middle','middle']"
+                                    data-voffset="['82','82','73','70']"
+                                    data-width="none"
                                     data-height="none"
                                     data-whitespace="nowrap"
-                                    data-type="button"
+                                    data-type="text"
                                     data-responsive_offset="on"
-                                    data-frames='[{"delay":10,"speed":2000,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":280,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"500","ease":"Linear.ease","to":"o:1;rX:0;rY:0;rZ:0;z:0;"}]'
-                                    data-textalign="['inherit','inherit','inherit','center']"
+                                    data-responsive="off"
+                                    data-frames='[{"delay":10,"speed":2000,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":280,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                    data-textalign="['inherit','inherit','inherit','inherit']"
                                     data-paddingtop="[0,0,0,0]"
                                     data-paddingright="[0,0,0,0]"
                                     data-paddingbottom="[0,0,0,0]"
@@ -887,21 +944,15 @@ const Banner = () => {
                                         fontSize: "12px",
                                         lineHeight: "22px",
                                         fontWeight: 600,
+                                        letterSpacing: "0px",
                                         fontFamily: "Poppins"
                                     }}
                                 >
                                     <a
-                                        href="#"
-                                        className="btn pink-color-gradient-btn mr-3"
+                                        href="/products"
+                                        className="btn white-into-black-trans-btn mr-3"
                                     >
-                                        READ MORE
-                                    </a>
-
-                                    <a
-                                        href="#"
-                                        className="btn trans-pink-color-gradient-btn"
-                                    >
-                                        SHOW NOW
+                                        EXPLORE
                                     </a>
                                 </div>
 
@@ -980,7 +1031,7 @@ const Banner = () => {
                                         fontFamily: "'Poppins', sans-serif"
                                     }}
                                 >
-                                    The Most latest
+                                    Made for Your Space
                                 </div>
 
 
@@ -1014,7 +1065,7 @@ const Banner = () => {
                                         fontFamily: "'Poppins', sans-serif"
                                     }}
                                 >
-                                    Classic Collection
+                                    Made to Connect
                                 </div>
 
 
@@ -1026,9 +1077,9 @@ const Banner = () => {
                                     data-y="['middle','middle','middle','middle']"
                                     data-voffset="['5','5','5','5']"
                                     data-fontsize="['18','18','16','16']"
-                                    data-width="none"
+                                    data-width="['none','none','300','300']"
                                     data-height="none"
-                                    data-whitespace="nowrap"
+                                    data-whitespace="['nowrap','nowrap','normal','normal']"
                                     data-type="text"
                                     data-responsive_offset="on"
                                     data-frames='[{"delay":10,"speed":2000,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":280,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
@@ -1047,23 +1098,24 @@ const Banner = () => {
                                         fontFamily: "'Poppins', sans-serif"
                                     }}
                                 >
-                                    Choose from clothes of World’s Famous Brands
+                                    Explore distinctive pieces that turn empty walls into something truly personal.
                                 </div>
 
 
                                 <div
-                                    className="tp-caption tp-resizeme"
-                                    id="slide-1-layer-8"
-                                    data-x="['left','center','center','center']"
+                                    className="tp-caption rev-btn rs-parallaxlevel-2"
+                                    id="slide-3-layer-4"
+                                    data-x="['center','center','center','center']"
                                     data-hoffset="['0','0','0','0']"
-                                    data-y="['top','top','top','top']"
-                                    data-voffset="['400','439','523','270']"
-                                    data-width="['160','160','260','260']"
+                                    data-y="['middle','middle','middle','middle']"
+                                    data-voffset="['82','82','73','70']"
+                                    data-width="none"
                                     data-height="none"
                                     data-whitespace="nowrap"
-                                    data-type="button"
+                                    data-type="text"
                                     data-responsive_offset="on"
-                                    data-frames='[{"delay":10,"speed":2000,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":280,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"500","ease":"Linear.ease","to":"o:1;rX:0;rY:0;rZ:0;z:0;"}]'
+                                    data-responsive="off"
+                                    data-frames='[{"delay":10,"speed":2000,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":280,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
                                     data-textalign="['inherit','inherit','inherit','inherit']"
                                     data-paddingtop="[0,0,0,0]"
                                     data-paddingright="[0,0,0,0]"
@@ -1081,17 +1133,10 @@ const Banner = () => {
                                     }}
                                 >
                                     <a
-                                        href="#"
-                                        className="btn white-btn mr-3"
+                                        href="/products"
+                                        className="btn white-into-black-trans-btn mr-3"
                                     >
-                                        READ MORE
-                                    </a>
-
-                                    <a
-                                        href="#"
-                                        className="btn trans-btn"
-                                    >
-                                        SHOW NOW
+                                        EXPLORE
                                     </a>
                                 </div>
 

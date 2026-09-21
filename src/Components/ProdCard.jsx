@@ -1,9 +1,9 @@
-const ProdCard = ({name, ext, id, category}) => {
+const ProdCard = ({name, ext, id, category, price}) => {
 
     const handleEnquiryClick = (event) => {
       event.preventDefault();
       // Storing state data in sessionStorage
-      sessionStorage.setItem('productData', JSON.stringify({ id, name, category }));
+      sessionStorage.setItem('productData', JSON.stringify({ id, name, category, price, ext }));
       window.location.href = "/enquiry";
     };
     
@@ -28,8 +28,8 @@ const ProdCard = ({name, ext, id, category}) => {
                 </div> */}
             </div>
             <div className="p-item-detail mt-5">
-                <h4 className="text-center p-item-name"><a href="product-detail.html"> {name} </a></h4>
-                <p className="text-center p-item-price">$100.00</p>
+                <h4 className="text-center p-item-name"><a href="#" onClick={handleEnquiryClick}> {name} </a></h4>
+                <p className="text-center p-item-price">{price}</p>
             </div>
         </div>
     )

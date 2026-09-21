@@ -17,23 +17,15 @@ const Contact = () => {
                                     </h4>
                                 </div>
                                 <p className="small-text text-center text-md-left">
-                                    Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard.
+                                    We’d love to hear from you. Reach out to our team using the contact details below, and we’ll get back to you shortly.
                                 </p>
                                 <div className="row location-details text-center text-md-left">
                                     <div className="col-12 col-md-6 country-1">
-                                        <h4 className="heading-text text-left">United States</h4>
+                                        <h4 className="heading-text text-left">India</h4>
                                         <ul>
-                                            <li><i className="fas fa-mobile-alt"></i><a href="tel:+34609331754">+(34) 609 33 17 54</a></li>
-                                            <li><i className="fas fa-envelope"></i><a href="mailto:email@website.com">email@website.com</a></li>
-                                            <li><i className="fas fa-map-marker"></i><a href="https://www.google.com/maps/search/?api=1&amp;query=201+Oak+Street+27+Manchester+USA">201 Oak Street 27 Manchester, USA</a></li>
-                                        </ul>
-                                    </div>
-                                    <div className="col-12 col-md-6 couuntry-1">
-                                        <h4 className="heading-text text-left">Australia</h4>
-                                        <ul>
-                                            <li><i className="fas fa-mobile-alt"></i><a href="tel:+34609331754">+(34) 609 33 17 54</a></li>
-                                            <li><i className="fas fa-envelope"></i><a href="mailto:email@website.com">email@website.com</a></li>
-                                            <li><i className="fas fa-map-marker"></i><a href="https://www.google.com/maps/search/?api=1&amp;query=201+Oak+Street+27+Manchester+USA">201 Oak Street 27 Manchester, USA</a></li>
+                                            <li><i className="fas fa-mobile-alt"></i><a href="tel:+91 96748 16201">+(91) 96748 16201</a></li>
+                                            <li><i className="fas fa-envelope"></i><a href="mailto:talestoldart@gmail.com">talestoldart@gmail.com</a></li>
+                                            <li><i className="fas fa-map-marker"></i><a href="https://www.google.com/maps/search/?api=1&amp;query=201+Oak+Street+27+Manchester+USA">FE Block, Salt Lake City, Kolkata</a></li>
                                         </ul>
                                     </div>
                                 </div>

@@ -12,7 +12,7 @@ const Enquiry = () => {
     return(
         <div>
             {/* <Standalone title="Enquiry" link="enquiry"/> */}
-            <PageRibbon />
+            {/* <PageRibbon /> */}
             <EnquiryForm product={name} />
         </div>
     )

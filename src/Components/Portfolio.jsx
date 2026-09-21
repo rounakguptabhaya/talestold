@@ -61,7 +61,7 @@ const Portfolio = () => {
                         <div className="portfolio-products-grid">
 
                             { featuredProducts.map((product) => {
-                                return <ProductCard key={product.id} name={product.name} isVisible={isVisible}/>
+                                return <ProductCard key={product.id} name={product.name} price={product.price} ext={product.ext} isVisible={isVisible}/>
                             }) }
 
                         </div>
