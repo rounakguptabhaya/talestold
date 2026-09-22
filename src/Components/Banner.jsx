@@ -63,10 +63,14 @@ const Banner = () => {
             // console.log("REV SLIDER: initializing");
 
             try {
+                console.log("JQUERY VERSION:", $.fn.jquery);
+                console.log("EASING:", $.easing);
+                console.log("POWER3:", $.easing?.Power3);
+                console.log("POWER4:", $.easing?.Power4);
 
                 $slider.show().revolution({
-                               hide_onmobile: false,
-                               hide_under: 0,
+                    hide_onmobile: false,
+                    hide_under: 0,
 
                     /*
                     IMPORTANT:
