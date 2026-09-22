@@ -2,7 +2,7 @@ import React from "react";
 
 const EnquiryForm = () => {
     const productData = JSON.parse(sessionStorage.getItem('productData'));
-    // console.log(productData);
+    console.log(productData);
 
 
     return (
@@ -16,7 +16,7 @@ const EnquiryForm = () => {
                                 <div className="pro-detail-sec row">
                                     <div className="col-12">
                                         <h4 className="pro-heading text-center text-lg-left">{productData.name}</h4>
-                                        <h4 className="pro-heading text-center text-lg-left m-0"><span style={{ color: '#ff1492', fontSize: '20px' }}>({productData.dim})</span></h4>
+                                        <h4 className="pro-heading text-center text-lg-left"><span style={{color: '#ff1492', fontSize: '20px'}}>({productData.dim})</span></h4>
 
                                         <p className="pro-text text-center text-lg-left">{productData.description.oneLiner}</p>
                                     </div>
@@ -62,7 +62,7 @@ const EnquiryForm = () => {
                                                             <p className="small-text">
                                                                 Enquiry for {productData.name}.
                                                             </p>
-                                                            <form className="contact-form" id="contact-form-data" action="https://formspree.io/f/mdknvwpd" method="POST">
+                                                            <form className="contact-form" id="contact-form-data" action="https://formspree.io/f/xgaegpkg" method="POST">
                                                                 <div className="row my-form">
                                                                     <div className="col-md-12 col-sm-12">
                                                                         <div id="result"></div>
