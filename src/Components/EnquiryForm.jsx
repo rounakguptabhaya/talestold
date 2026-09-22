@@ -15,7 +15,9 @@ const EnquiryForm = () => {
                             <div className="product-body">
                                 <div className="pro-detail-sec row">
                                     <div className="col-12">
-                                        <h4 className="pro-heading text-center text-lg-left">{productData.name} <span style={{color: '#ff1492'}}>({productData.dim})</span></h4>
+                                        <h4 className="pro-heading text-center text-lg-left">{productData.name}</h4>
+                                        <h4 className="pro-heading text-center text-lg-left m-0"><span style={{ color: '#ff1492', fontSize: '20px' }}>({productData.dim})</span></h4>
+
                                         <p className="pro-text text-center text-lg-left">{productData.description.oneLiner}</p>
                                     </div>
                                 </div>
