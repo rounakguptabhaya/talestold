@@ -69,6 +69,7 @@ const Portfolio = () => {
                                     ext={product.ext}
                                     category={product.category}
                                     description={product.description}
+                                    dim={product.dim}
                                     isVisible={isVisible}
                                 />
                             })}

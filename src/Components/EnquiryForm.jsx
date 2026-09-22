@@ -15,7 +15,7 @@ const EnquiryForm = () => {
                             <div className="product-body">
                                 <div className="pro-detail-sec row">
                                     <div className="col-12">
-                                        <h4 className="pro-heading text-center text-lg-left">{productData.name}</h4>
+                                        <h4 className="pro-heading text-center text-lg-left">{productData.name} <span style={{color: '#ff1492'}}>({productData.dim})</span></h4>
                                         <p className="pro-text text-center text-lg-left">{productData.description.oneLiner}</p>
                                     </div>
                                 </div>
@@ -33,14 +33,14 @@ const EnquiryForm = () => {
 
                                     <div className="col-12 col-lg-6 text-center text-lg-left">
                                         <div className="product-single-price">
-                                            <h4><span className="real-price">${productData.price}</span></h4>
+                                            <h4><span className="real-price">{productData.price}</span></h4>
                                             {/* <p className="pro-description">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p> */}
                                         </div>
 
                                         <div class="product-checklist">
                                             <ul>
                                                 {productData.description && Object.entries(productData.description).map(([key, value]) => (
-                                                    key !== 'oneLiner' && <li key={key}><i className="fas fa-circle"></i> {value}</li>
+                                                    (key !== 'oneLiner' || key !== 'dim') && <li key={key}><i className="fas fa-circle"></i> {value}</li>
                                                 ))}
                                                 {/* <li><i className="fas fa-circle"></i> Satisfaction 100% Guaranteed</li>
                                                 <li><i className="fas fa-circle"></i> free shipping on orders over $99</li>

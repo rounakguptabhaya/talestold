@@ -1,4 +1,4 @@
-const ProductCard = ({ name, price, ext, isVisible, id, category, description }) => {
+const ProductCard = ({ name, price, ext, isVisible, id, category, description, dim }) => {
     // console.log("product:", product);
     console.log(description);
     
@@ -6,7 +6,7 @@ const ProductCard = ({ name, price, ext, isVisible, id, category, description })
     const handleEnquiryClick = (event) => {
       event.preventDefault();
       // Storing state data in sessionStorage
-      sessionStorage.setItem('productData', JSON.stringify({ id, name, category, price, ext, description }));
+      sessionStorage.setItem('productData', JSON.stringify({ id, name, category, price, ext, description, dim }));
       window.location.href = "/enquiry";
     };
 

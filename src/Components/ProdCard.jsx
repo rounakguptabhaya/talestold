@@ -1,11 +1,11 @@
-const ProdCard = ({name, ext, id, category, price, description}) => {
+const ProdCard = ({name, ext, id, category, price, description, dim}) => {
 
     // console.log("description:", description);
 
     const handleEnquiryClick = (event) => {
       event.preventDefault();
       // Storing state data in sessionStorage
-      sessionStorage.setItem('productData', JSON.stringify({ id, name, category, price, ext, description }));
+      sessionStorage.setItem('productData', JSON.stringify({ id, name, category, price, ext, description, dim }));
       window.location.href = "/enquiry";
     };
     
