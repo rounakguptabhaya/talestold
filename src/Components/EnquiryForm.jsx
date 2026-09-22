@@ -2,7 +2,7 @@ import React from "react";
 
 const EnquiryForm = () => {
     const productData = JSON.parse(sessionStorage.getItem('productData'));
-    console.log(productData);
+    // console.log(productData);
 
 
     return (
