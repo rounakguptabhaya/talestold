@@ -68,6 +68,11 @@ const Banner = () => {
                 console.log("POWER3:", $.easing?.Power3);
                 console.log("POWER4:", $.easing?.Power4);
 
+                console.log("PUNCHGS:", window.punchgs);
+                console.log("PUNCHGS POWER3:", window.punchgs?.Power3);
+                console.log("PUNCHGS POWER4:", window.punchgs?.Power4);
+                console.log("PUNCHGS TWEENLITE:", window.punchgs?.TweenLite);
+
                 $slider.show().revolution({
                     hide_onmobile: false,
                     hide_under: 0,
