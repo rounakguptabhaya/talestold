@@ -68,6 +68,7 @@ const Products = () => {
                                                     price={product.price}
                                                     id={product.id}
                                                     category={product.category}
+                                                    description={product.description}
                                                 />
                                             );
                                         })}

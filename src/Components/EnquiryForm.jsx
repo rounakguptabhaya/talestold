@@ -16,7 +16,7 @@ const EnquiryForm = () => {
                                 <div className="pro-detail-sec row">
                                     <div className="col-12">
                                         <h4 className="pro-heading text-center text-lg-left">{productData.name}</h4>
-                                        <p className="pro-text text-center text-lg-left">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
+                                        <p className="pro-text text-center text-lg-left">{productData.description.oneLiner}</p>
                                     </div>
                                 </div>
                                 <div className="row product-list product-detail">
@@ -34,7 +34,18 @@ const EnquiryForm = () => {
                                     <div className="col-12 col-lg-6 text-center text-lg-left">
                                         <div className="product-single-price">
                                             <h4><span className="real-price">${productData.price}</span></h4>
-                                            <p className="pro-description">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
+                                            {/* <p className="pro-description">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p> */}
+                                        </div>
+
+                                        <div class="product-checklist">
+                                            <ul>
+                                                {productData.description && Object.entries(productData.description).map(([key, value]) => (
+                                                    key !== 'oneLiner' && <li key={key}><i className="fas fa-circle"></i> {value}</li>
+                                                ))}
+                                                {/* <li><i className="fas fa-circle"></i> Satisfaction 100% Guaranteed</li>
+                                                <li><i className="fas fa-circle"></i> free shipping on orders over $99</li>
+                                                <li><i className="fas fa-circle"></i> 14 days easy Return</li> */}
+                                            </ul>
                                         </div>
 
 
@@ -45,7 +56,7 @@ const EnquiryForm = () => {
                                                         className="col-12 contact-box enquiry-contact-box text-center text-md-left"
                                                     >
                                                         <div className="c-box">
-                                                            <h4 className="small-heading">Leave Message</h4>
+                                                            <h4 className="small-heading">Fill the below details</h4>
                                                             <p className="small-text">
                                                                 Enquiry for {productData.name}.
                                                             </p>

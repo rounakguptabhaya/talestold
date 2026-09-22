@@ -2,6 +2,7 @@ import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 const NavbarTest = () => {
+    const currYear = new Date().getFullYear();
     const location = useLocation();
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -356,7 +357,7 @@ const NavbarTest = () => {
                                                 {/* <li><a className="twitter-bg-hvr" href="javascript:void(0)"><i className="fab fa-twitter"></i> </a> </li> */}
                                                 <li><a className="instagram-bg-hvr" target="_blank" href="https://www.instagram.com/sgb_tales?stkn=MWs1bXBqNmFveHd5&utm_source=qr"><i className="fab fa-instagram"></i> </a> </li>
                                             </ul>
-                                            <p className="whitecolor">&copy; <span id="year"></span> Product Shop. Made With Love by ThemesIndustry</p>
+                                            <p className="whitecolor">Copyright &copy; {currYear} <a href="javascript:void(0);">TalesTold</a></p>
                                         </div>
                                     </div>
                                 </div>

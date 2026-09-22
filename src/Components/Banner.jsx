@@ -436,7 +436,7 @@ const Banner = () => {
                             >
 
                                 <img
-                                    src="images/Reverie.png"
+                                    src="images/Reverie1.png"
                                     data-bgposition="right center"
                                     data-bgfit={bgFit}
                                     data-bgrepeat="no-repeat"
@@ -737,9 +737,9 @@ const Banner = () => {
 
 
                                 <div
-                                    className="tp-caption rev-btn rs-parallaxlevel-2"
+                                    className="tp-caption tp-resizeme"
                                     id="slide-3-layer-4"
-                                    data-x="['center','center','center','center']"
+                                    data-x="['right','right','center','center']"
                                     data-hoffset="['0','0','0','0']"
                                     data-y="['middle','middle','middle','middle']"
                                     data-voffset="['82','82','73','70']"
@@ -919,9 +919,9 @@ const Banner = () => {
 
 
                                 <div
-                                    className="tp-caption rev-btn rs-parallaxlevel-2"
+                                    className="tp-caption tp-resizeme"
                                     id="slide-3-layer-4"
-                                    data-x="['center','center','center','center']"
+                                    data-x="['left','left','center','center']"
                                     data-hoffset="['0','0','0','0']"
                                     data-y="['middle','middle','middle','middle']"
                                     data-voffset="['82','82','73','70']"
@@ -993,7 +993,7 @@ const Banner = () => {
                                 <img
                                     src="images/model2.png"
                                     alt=""
-                                    data-bgposition="bottom right"
+                                    data-bgposition="bottom left"
                                     data-bgfit={bgFit}
                                     data-bgrepeat="no-repeat"
                                     data-bgparallax="off"
@@ -1005,7 +1005,7 @@ const Banner = () => {
                                 <div
                                     className="tp-caption tp-resizeme"
                                     id="slide-1-layer-1"
-                                    data-x="['left','center','center','center']"
+                                    data-x="['right','right','center','center']"
                                     data-hoffset="['5','0','0','0']"
                                     data-y="['middle','middle','middle','middle']"
                                     data-voffset="['-120','-115','-114','-114']"
@@ -1038,7 +1038,7 @@ const Banner = () => {
                                 <div
                                     className="tp-caption tp-resizeme"
                                     id="slide-1-layer-2"
-                                    data-x="['left','center','center','center']"
+                                    data-x="['right','right','center','center']"
                                     data-hoffset="['0','0','0','0']"
                                     data-y="['middle','middle','middle','middle']"
                                     data-voffset="['-52','-52','-52','-52']"
@@ -1072,7 +1072,7 @@ const Banner = () => {
                                 <div
                                     className="tp-caption tp-resizeme"
                                     id="slide-1-layer-3"
-                                    data-x="['left','center','center','center']"
+                                    data-x="['right','right','center','center']"
                                     data-hoffset="['0','0','0','0']"
                                     data-y="['middle','middle','middle','middle']"
                                     data-voffset="['5','5','5','5']"
@@ -1103,9 +1103,9 @@ const Banner = () => {
 
 
                                 <div
-                                    className="tp-caption rev-btn rs-parallaxlevel-2"
+                                    className="tp-caption tp-resizeme"
                                     id="slide-3-layer-4"
-                                    data-x="['center','center','center','center']"
+                                    data-x="['right','right','center','center']"
                                     data-hoffset="['0','0','0','0']"
                                     data-y="['middle','middle','middle','middle']"
                                     data-voffset="['82','82','73','70']"
