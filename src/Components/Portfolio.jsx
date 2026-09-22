@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, } from 'react';
-import {useProductContext} from '../contexts/productContext.jsx';
+import { useProductContext } from '../contexts/productContext.jsx';
 import ProductCard from './ProductCard.jsx';
 
 const Portfolio = () => {
@@ -60,9 +60,18 @@ const Portfolio = () => {
                     <div className="col-12">
                         <div className="portfolio-products-grid">
 
-                            { featuredProducts.map((product) => {
-                                return <ProductCard key={product.id} name={product.name} price={product.price} ext={product.ext} isVisible={isVisible}/>
-                            }) }
+                            {featuredProducts.map((product) => {
+                                return <ProductCard
+                                    key={product.id}
+                                    id={product.id}
+                                    name={product.name}
+                                    price={product.price}
+                                    ext={product.ext}
+                                    category={product.category}
+                                    description={product.description}
+                                    isVisible={isVisible}
+                                />
+                            })}
 
                         </div>
                         <div className="d-flex justify-content-center">
