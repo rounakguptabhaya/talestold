@@ -24,7 +24,9 @@ import './vendor/wow.min.js';
 import './vendor/bootstrap-input-spinner.js';
 import './vendor/parallaxie.min.js';
 import './vendor/nouislider.min.js';
-import './vendor/stickyfill.min.js'
+import './vendor/stickyfill.min.js';
+import './vendor/TweenLite.js';
+import './vendor/TweenMax.min.js';
 import './vendor/jquery.themepunch.tools.min.js';
 import './vendor/jquery.themepunch.revolution.min.js';
 
