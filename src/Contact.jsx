@@ -23,7 +23,7 @@ const Contact = () => {
                                     <div className="col-12 col-md-6 country-1">
                                         <h4 className="heading-text text-left">India</h4>
                                         <ul>
-                                            <li><i className="fas fa-mobile-alt"></i><a href="tel:+91 96748 16201">+(91) 96748 16201</a></li>
+                                            <li><i className="fas fa-mobile-alt"></i><a href="tel:+91 86979 16201">+(91) 86979 16201</a></li>
                                             <li><i className="fas fa-envelope"></i><a href="mailto:talestoldart@gmail.com">talestoldart@gmail.com</a></li>
                                             <li><i className="fas fa-map-marker"></i><a href="https://www.google.com/maps/search/?api=1&amp;query=201+Oak+Street+27+Manchester+USA">FE Block, Salt Lake City, Kolkata</a></li>
                                         </ul>
