@@ -1,5 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import { Analytics } from '@vercel/analytics/react';
 
 import $ from './jquerySetup.js';
 
@@ -38,6 +39,7 @@ import { FilterContextProvider } from './contexts/filterContext.jsx';
 import App from './App.jsx';
 
 
+
 async function bootstrap() {
 
   // 1. Load ThemePunch tools first
@@ -63,6 +65,7 @@ async function bootstrap() {
           <App />
         </FilterContextProvider>
       </AppProvider>
+      <Analytics />
     </StrictMode>,
   );
 }
